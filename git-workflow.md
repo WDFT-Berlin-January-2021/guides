@@ -36,11 +36,13 @@ We pull in the changes from the GitHub repo:
     
     git pull origin master
 
-If you don't want to continue to work in your branch (e.g. that branch was created just for one feature) you can now just delete this branch and then create a new branch for the next feature
+### If you don't want to continue to work in your branch (e.g. that branch was created just for one feature) you can now just delete this branch and then create a new branch for the next feature
 
     git checkout master
 
     git branch -d <branch-name>
+
+### In case you want to keep on using your branch:
 
 We switch to our own branch that we just pushed to GitHub: 
     

@@ -369,6 +369,7 @@ $ heroku logs --tail --app <name of your app>
 ## Executing scripts on the server - e.g. running a seed file - after logging in with the Heroku CLI as showed above
 
 ```bash
+# This opens the terminal connection to our application
 $ heroku run bash --app <name of your app>
 
 # We may then run the seed file

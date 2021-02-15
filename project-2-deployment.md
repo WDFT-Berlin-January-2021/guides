@@ -276,15 +276,14 @@ Start by copying the MONGODB_URI config variable from the *Settings* tab and the
 ### If unable to install the CLI via the Standalone installation (using a file) :
 
 ```bash
-npm install -g heroku
+$ npm install -g heroku
 
 
-heroku --version
+$ heroku --version
 
 # heroku/7.0.0 (darwin-x64) node-v8.0.0
 
-
-heroku login
+$ heroku login
 ```
 
 
@@ -302,29 +301,34 @@ While in the server root directory, in the terminal run :
 
 ```bash
 # Commit the most recent work and merge it to the master branch
-git add .
-git commit -m 'Update xyz.js with new middleware'
-git push origin <branch-name>
-
+$ git add .
+$ git commit -m 'Update xyz.js with new middleware'
+$ git push origin <branch-name>
+```
 
 # Checkout to the master branch
-git checkout master
-
+```bash
+$ git checkout master
+```
 
 # Add heroku remote
-heroku git:remote -a <name-of-the-newly-created-app>
+```bash
+$ heroku git:remote -a <name-of-the-newly-created-app>
+```
 
 
 # Check the remotes available
-git remote -v
-
+```bash
+$ git remote -v
+```
 
 # Make some changes to the code and deploy them to Heroku using Git.
-git add .
+```bash
+$ git add .
 
-git commit -m 'Make it better'
+$ git commit -m 'Make it better'
 
-git push heroku master
+$ git push heroku master
 ```
 
 
@@ -339,7 +343,7 @@ git push heroku master
 #### To fetch your app’s most recent logs, use the `heroku logs` command:
 
 ```bash
-heroku logs
+$ heroku logs
 ```
 
 The `logs` command retrieves 100 log lines by default. 
@@ -347,8 +351,7 @@ The `logs` command retrieves 100 log lines by default.
 #### You can specify the number of log lines to retrieve (up to a maximum of 1,500 lines) by using the `--num` (or `-n`) option.
 
 ```bash
-heroku logs -n 200
-
+$ heroku logs -n 200
 ```
 
 
@@ -359,24 +362,18 @@ heroku logs -n 200
 The name of your app can be found on heroku under settings
 
 ```bash
-heroku logs --tail --app <name of your app>
+$ heroku logs --tail --app <name of your app>
 
 ```
 
 ## Executing scripts on the server - e.g. running a seed file
 
-
-### [heroku run bash](https://devcenter.heroku.com/articles/heroku-cli-commands#heroku-run)
-
-We can open the terminal instance on the Heroku container ([dyno](https://www.heroku.com/dynos)) in order to run custom scripts or see the files included in the instance. 
-
 ```bash
 # Open the terminal in the app dyno in Heroku
-heroku run bash
+$ heroku run bash --app <name of your app>
 
 # We may then run the seed file
-node bin/seed.js
-
+$ node bin/seed.js
 ```
 
 <br>

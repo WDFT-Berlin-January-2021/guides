@@ -6,12 +6,19 @@
 $ npx ironlauncher projector --json
 ```
 
-### Now we will go into this folder and create a react app there - this will be in a folder called 'client'
+### We also need to install the CORS package 
+```bash
+$ cd projector
+$ npm install cors
+```
 
+### Now we will go into the root project folder and create a react app there - this will be in a folder called 'client'
 ```bash
 $ cd projector
 $ npx create-react-app client
 ```
+
+### This should result in exactly the same structure that we have [in this example](https://github.com/WDFT-Berlin-January-2021/w8d1/tree/master/projector)
 
 ### Then we also want to remove git from within the client folder - otherwise you will get an error later if you use git in your project
 

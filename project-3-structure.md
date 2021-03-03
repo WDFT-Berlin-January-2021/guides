@@ -42,6 +42,8 @@ $ git commit -m 'initial commit'
 
 ### Then you go to GitHub, create a new repository for your project, copy the line 'git remote add origin ...' and push to master
 
-Now we have our basic project structure 
+Now we have our basic project structure 💪 
+
+The other team members can now clone the repo from GitHub (make sure to run npm install in both the root and in the client folder).
 
 Happy hacking 💙
